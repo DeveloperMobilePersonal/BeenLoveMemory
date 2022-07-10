@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "940184597384",
+    "project_id": "been-love-memory-01",
+    "storage_bucket": "been-love-memory-01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940184597384:android:2ccac9b3fbe5d2b3d7403d",
+        "android_client_info": {
+          "package_name": "com.lovecounter.beenlovememory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "940184597384-t181mdeefgvic5sh86ardbe23447uosj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6SBPEQ-VfflGTWvwBP0r-NUPg9vxKIE8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "940184597384-t181mdeefgvic5sh86ardbe23447uosj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

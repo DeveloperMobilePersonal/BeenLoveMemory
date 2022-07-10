@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.teamdev.demngayyeu2020.ui.MainViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:background="@drawable/bg_default">
+
+        <com.teamdev.demngayyeu2020.views.NestedScrollableHost
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/csBottom"
+            android:paddingBottom="@dimen/_22sdp">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.teamdev.demngayyeu2020.views.NestedScrollableHost>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/csBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_22sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivStatusIcon"
+                loadImage="@{viewModel.liveStatusIcon}"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivFace1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:tint="@color/pinkFF5D86"
+                tools:src="@drawable/ic_favourite_2" />
+
+            <com.github.siyamed.shapeimageview.ShapeImageView
+                android:id="@+id/ivFace1"
+                setImage="@{viewModel.liveFaceMale}"
+                setShape="@{viewModel.liveFrameImageMale}"
+                android:layout_width="@dimen/_76sdp"
+                android:layout_height="@dimen/_76sdp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toStartOf="@+id/ivStatusIcon"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:siBorderColor="@color/white"
+                app:siBorderWidth="@dimen/_2sdp"
+                app:siShape="@raw/w_circle"
+                app:siSquare="true"
+                tools:src="@drawable/ic_male_default" />
+
+            <com.github.siyamed.shapeimageview.ShapeImageView
+                android:id="@+id/ivFace2"
+                setImage="@{viewModel.liveFaceFeMale}"
+                setShape="@{viewModel.liveFrameImageFeMale}"
+                android:layout_width="@dimen/_76sdp"
+                android:layout_height="@dimen/_76sdp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ivStatusIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:siBorderColor="@color/white"
+                app:siBorderWidth="@dimen/_2sdp"
+                app:siShape="@raw/w_circle"
+                app:siSquare="true"
+                tools:src="@drawable/ic_female_default" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvName1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/love_girl"
+                android:gravity="center"
+                android:maxLines="2"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp"
+                android:text="@{viewModel.liveNameMale}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sdp"
+                app:layout_constraintEnd_toStartOf="@+id/ivStatusIcon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivFace1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvName2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/love_girl"
+                android:gravity="center"
+                android:maxLines="2"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp"
+                android:text="@{viewModel.liveNameFemale}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/ivStatusIcon"
+                app:layout_constraintTop_toBottomOf="@+id/ivFace1" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llAge1"
+                loadBackground="@{viewModel.liveBgAgeMale}"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_4sdp"
+                app:layout_constraintEnd_toStartOf="@+id/llBow1"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvName1"
+                tools:background="@drawable/shape_bow_default">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    loadSexLocation1="@{viewModel.liveSexLocation}"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    app:tint="@color/white"
+                    tools:src="@drawable/ic_sex_male" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:fontFamily="@font/love_girl"
+                    android:includeFontPadding="false"
+                    android:text="@{viewModel.liveAgeMale}"
+                    tools:text="25"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llBow1"
+                loadBackground="@{viewModel.liveBgBowMale}"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_4sdp"
+                app:layout_constraintEnd_toEndOf="@+id/tvName1"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/llAge1"
+                app:layout_constraintTop_toTopOf="@+id/llAge1"
+                tools:background="@drawable/shape_bow_default">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    loadImage="@{viewModel.liveBowIconMale}"
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:background="@drawable/shape_circle"
+                    android:padding="0.5dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:fontFamily="@font/love_girl"
+                    android:includeFontPadding="false"
+                    android:text="@{viewModel.liveBowMale}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llAge2"
+                loadBackground="@{viewModel.liveBgAgeFeMale}"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_4sdp"
+                app:layout_constraintEnd_toStartOf="@+id/llBow2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@+id/tvName2"
+                app:layout_constraintTop_toBottomOf="@+id/tvName2"
+                tools:background="@drawable/shape_bow_default">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    loadSexLocation2="@{viewModel.liveSexLocation}"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    app:tint="@color/white"
+                    tools:src="@drawable/ic_sex_female" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:fontFamily="@font/love_girl"
+                    android:includeFontPadding="false"
+                    android:text="@{viewModel.liveAgeFeMale}"
+                    tools:text="25"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llBow2"
+                loadBackground="@{viewModel.liveBgBowFeMale}"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_4sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/llAge2"
+                app:layout_constraintTop_toTopOf="@+id/llAge2"
+                tools:background="@drawable/shape_bow_default">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    loadImage="@{viewModel.liveBowIconFeMale}"
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:background="@drawable/shape_circle"
+                    android:padding="0.5dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:fontFamily="@font/love_girl"
+                    android:includeFontPadding="false"
+                    android:text="@{viewModel.liveBowFeMale}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+</layout>

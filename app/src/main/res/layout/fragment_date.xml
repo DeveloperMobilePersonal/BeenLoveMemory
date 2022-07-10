@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.teamdev.demngayyeu2020.ui.MainViewModel" />
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        tools:background="@drawable/bg_default">
+
+        <com.teamdev.demngayyeu2020.views.clock.ClockView
+            android:id="@+id/clock_view"
+            loadClock="@{viewModel.liveLoveDay}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llLetter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    letterNameLocation="@{viewModel.liveLetterNameLocation}"
+                    setName1="@{viewModel.liveNameMale}"
+                    setName2="@{viewModel.liveNameFemale}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:fontFamily="@font/love_girl"
+                    android:gravity="start"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/clock_view"
+                    tools:text="Gửi Nickname 2," />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMessageCustom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:fontFamily="@font/love_girl"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/_3sdp"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    android:text="@{viewModel.liveLetterMessageCustom}"
+                    android:visibility="@{viewModel.liveHasLetterMessageCustom ? View.VISIBLE :View.GONE}"
+                    app:layout_constraintTop_toBottomOf="@+id/clock_view" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMessageDefault"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:fontFamily="@font/love_girl"
+                    android:gravity="start"
+                    android:lineSpacingExtra="@dimen/_3sdp"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/clock_view"
+                    tools:text="Chúng mình đã yêu nhau được 1 tháng, 2 tuần, 6 ngày, 22 giờ, 35 phút, 37 giây." />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    letterNameLocation2="@{viewModel.liveLetterNameLocation}"
+                    setName3="@{viewModel.liveNameMale}"
+                    setName4="@{viewModel.liveNameFemale}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:fontFamily="@font/love_girl"
+                    android:gravity="end"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/clock_view"
+                    tools:text="Mãi yêu, Nickname 2" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </ScrollView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

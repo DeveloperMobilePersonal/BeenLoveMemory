@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AnimatorScale">
+        <item name="android:windowEnterAnimation">@anim/scale_up_dialog</item>
+        <item name="android:windowExitAnimation">@anim/scale_out_dialog</item>
+    </style>
+
+</resources>

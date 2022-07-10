@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.teamdev.demngayyeu2020.ui.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cs_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:background="@drawable/bg_default">
+
+        <com.teamdev.demngayyeu2020.views.WaveLoadingView
+            android:id="@+id/wave"
+            wlvProgressValue="@{viewModel.liveLoveDay}"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_180sdp"
+            android:layout_marginTop="@dimen/_22sdp"
+            android:clickable="false"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:wlv_borderColor="@color/pinkEC2994"
+            app:wlv_borderWidth="@dimen/_2sdp"
+            app:wlv_round_rectangle="true"
+            app:wlv_triangle_direction="north"
+            app:wlv_waveAmplitude="80"
+            app:wlv_waveColor="@color/pinkEC2994"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitleTop"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/love_girl"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:maxLines="4"
+            android:text="@{viewModel.liveStatusTop}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintBottom_toTopOf="@+id/tvCountLove"
+            app:layout_constraintEnd_toEndOf="@+id/wave"
+            app:layout_constraintStart_toStartOf="@+id/wave"
+            app:layout_constraintTop_toTopOf="@+id/wave" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCountLove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/love_girl"
+            android:gravity="center"
+            android:lines="1"
+            android:text="@{viewModel.liveLoveDay}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_40sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/wave"
+            app:layout_constraintEnd_toEndOf="@+id/wave"
+            app:layout_constraintStart_toStartOf="@+id/wave"
+            app:layout_constraintTop_toTopOf="@+id/wave"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitleBottom"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/love_girl"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:maxLines="4"
+            android:paddingTop="@dimen/_5sdp"
+            android:text="@{viewModel.liveStatusBottom}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="@id/wave"
+            app:layout_constraintEnd_toEndOf="@id/wave"
+            app:layout_constraintStart_toStartOf="@id/wave"
+            app:layout_constraintTop_toBottomOf="@id/tvCountLove" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

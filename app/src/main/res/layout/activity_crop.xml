@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#303030"
+        android:orientation="vertical"
+        tools:context=".ui.crop.CropActivity">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:cardBackgroundColor="#303030"
+            app:cardElevation="@dimen/_12sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="@dimen/_3sdp"
+                app:srcCompat="@drawable/ic_back"
+                app:tint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDone"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="@dimen/_3sdp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_done"
+                app:tint="@color/white" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="@dimen/_3sdp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_done"
+                app:tint="@color/white" />
+
+        </androidx.cardview.widget.CardView>
+
+        <com.theartofdev.edmodo.cropper.CropImageView
+            android:id="@+id/cropImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

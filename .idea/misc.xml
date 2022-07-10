@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable-anydpi-v24/ic_stat_name.xml" value="0.2105" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_aquarius.xml" value="0.2005" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_favourite.xml" value="0.2085" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_heart_4.xml" value="0.212" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_home.xml" value="0.201" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_love_clock_view.xml" value="0.2025" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_off_button.xml" value="0.212" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_on_button.xml" value="0.212" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_pen.xml" value="0.212" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_radio.xml" value="0.2015" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_w_apple.xml" value="0.1865" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_w_circle.xml" value="0.1865" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_w_extension.xml" value="0.156" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_w_fire.xml" value="0.1865" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_w_flower.xml" value="0.1865" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_w_heart_1.xml" value="0.2025" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_w_heart_2.xml" value="0.1865" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_w_hexagon.xml" value="0.156" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_w_instagram.xml" value="0.156" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_w_puzzle.xml" value="0.156" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_w_shit.xml" value="0.1865" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_w_star.xml" value="0.156" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_w_triangle.xml" value="0.1865" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_w_water.xml" value="0.156" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ic_warning.xml" value="0.1845" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ripple_btn_allow.xml" value="0.1935" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ripple_btn_allow_no_if.xml" value="0.2035" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/ripple_btn_un_allow.xml" value="0.212" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/shape_bg_face_notification.xml" value="0.193" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/shape_bg_face_notitication.xml" value="0.211" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/shape_circle.xml" value="0.171" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/shape_circle_default.xml" value="0.177" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/shape_clock.xml" value="0.2025" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/shape_gray_diary.xml" value="0.202" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/shape_loading_glide.xml" value="0.1845" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/shape_radius_top_white_12sdp.xml" value="0.212" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/shape_ripple.xml" value="0.1645" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/shape_select.xml" value="0.209" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/shape_select2.xml" value="0.178" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/shape_sex_default.xml" value="0.2075" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/shape_un_select.xml" value="0.212" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/shape_white_full_radius.xml" value="0.179" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/shape_white_full_radius_notification.xml" value="0.212" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_1.xml" value="0.155" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_10.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_11.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_12.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_13.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_14.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_15.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_16.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_17.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_18.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_19.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_2.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_20.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_21.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_22.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_23.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_24.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_25.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_3.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_4.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_5.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_6.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_7.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_8.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/drawable/wave_9.xml" value="0.162" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/activity_crop.xml" value="0.176" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/activity_diary.xml" value="0.264" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/activity_gallery.xml" value="0.4" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/clock_view.xml" value="0.4543114543114543" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/dialog_color.xml" value="0.2" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/dialog_date.xml" value="0.3286118980169972" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/dialog_input.xml" value="0.4" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/dialog_menu_birthday.xml" value="0.264" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/dialog_menu_diary.xml" value="0.4" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/dialog_menu_info.xml" value="0.4" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/dialog_menu_letter.xml" value="0.264" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/dialog_menu_svg.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/dialog_menu_wave_svg.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/dialog_menu_with_wave.xml" value="0.264" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/fragment_date.xml" value="0.264" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/fragment_diary.xml" value="0.3741496598639456" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/fragment_main.xml" value="0.5455950540958269" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/fragment_setting.xml" value="0.2" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/fragment_wave.xml" value="0.176" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/item_diary.xml" value="0.264" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/item_gallery.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/item_svg.xml" value="0.4" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/notification.xml" value="0.264" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeenLoveMemory/app/src/main/res/layout/shape_radius_top_white_20dp.xml" value="0.20052083333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
