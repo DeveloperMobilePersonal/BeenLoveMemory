@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Been Love Memory</string>
+    <string name="app_name" translatable="false">Been Love Memory</string>
     <string name="txt_diary">Diary\t</string>
     <string name="txt_setting">Settings</string>
     <string name="txt_home">Home</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name = "app_name">Cặp đôi đang yêu</string>
     <string name = "txt_diary">Nhật ký \ t</string>
     <string name = "txt_setting">Cài đặt</string>
     <string name = "txt_home">Trang chủ</string>
