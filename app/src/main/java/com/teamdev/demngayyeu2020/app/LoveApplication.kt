@@ -4,6 +4,9 @@ import android.app.Application
 import android.content.Context
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.multidex.MultiDex
+import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.RequestConfiguration
+import com.google.firebase.messaging.FirebaseMessaging
 import com.jakewharton.threetenabp.AndroidThreeTen
 import com.teamdev.demngayyeu2020.ex.Pref
 import com.teamdev.demngayyeu2020.module.listModule
@@ -24,6 +27,9 @@ class LoveApplication : Application() {
             fragmentFactory()
             modules(listModule)
         }
+        val builder = RequestConfiguration.Builder()
+        builder.setTestDeviceIds(listOf("187CBF63AF8AA99009F2D9E97CB01317"))
+        MobileAds.setRequestConfiguration(builder.build())
     }
 
     override fun attachBaseContext(base: Context) {

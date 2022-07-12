@@ -5,7 +5,7 @@ import com.teamdev.demngayyeu2020.base.BaseFragment
 import com.teamdev.demngayyeu2020.databinding.FragmentSettingBinding
 import com.teamdev.demngayyeu2020.ex.*
 import com.teamdev.demngayyeu2020.service.NotificationService
-import com.teamdev.demngayyeu2020.ui.MainViewModel
+import com.teamdev.demngayyeu2020.ui.main.MainViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 class FragmentSetting : BaseFragment<FragmentSettingBinding>() {

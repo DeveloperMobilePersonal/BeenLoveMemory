@@ -1,6 +1,5 @@
 package com.teamdev.demngayyeu2020.base
 
-import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,10 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
-import com.teamdev.demngayyeu2020.ui.MainActivity
+import com.teamdev.demngayyeu2020.ui.main.MainActivity
 import org.koin.android.scope.AndroidScopeComponent
 import org.koin.androidx.scope.fragmentScope
-import org.koin.core.scope.Scope
 
 abstract class BaseFragment<T : ViewDataBinding> : Fragment(), AndroidScopeComponent {
 
@@ -53,7 +51,7 @@ abstract class BaseFragment<T : ViewDataBinding> : Fragment(), AndroidScopeCompo
     protected abstract fun createUI()
     protected abstract fun destroyUI()
 
-    /*
+    /**
     * true : Activity run
     * false : Activity destroy
     * */

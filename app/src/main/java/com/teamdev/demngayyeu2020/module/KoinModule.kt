@@ -15,8 +15,8 @@ import com.teamdev.demngayyeu2020.room.RoomManager
 import com.teamdev.demngayyeu2020.scan.ScanPhoto
 import com.teamdev.demngayyeu2020.service.NotificationHelper
 import com.teamdev.demngayyeu2020.service.NotificationService
-import com.teamdev.demngayyeu2020.ui.MainActivity
-import com.teamdev.demngayyeu2020.ui.MainViewModel
+import com.teamdev.demngayyeu2020.ui.main.MainActivity
+import com.teamdev.demngayyeu2020.ui.main.MainViewModel
 import com.teamdev.demngayyeu2020.ui.adapter.ViewPagerAdapter
 import com.teamdev.demngayyeu2020.ui.crop.GalleryActivity
 import com.teamdev.demngayyeu2020.ui.crop.adapter.GalleryAdapter

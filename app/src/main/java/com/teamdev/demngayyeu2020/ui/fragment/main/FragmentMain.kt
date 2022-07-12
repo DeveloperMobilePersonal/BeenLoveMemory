@@ -12,7 +12,7 @@ import com.teamdev.demngayyeu2020.dialog.menu.info.MenuInfoListener
 import com.teamdev.demngayyeu2020.dialog.wave.SVGListener
 import com.teamdev.demngayyeu2020.ex.*
 import com.teamdev.demngayyeu2020.service.NotificationService
-import com.teamdev.demngayyeu2020.ui.MainViewModel
+import com.teamdev.demngayyeu2020.ui.main.MainViewModel
 import com.teamdev.demngayyeu2020.viewanimator.ViewAnimator
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 

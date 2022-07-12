@@ -19,28 +19,51 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BeenLoveMemory">
         <activity
-            android:name=".ui.diary.DiaryActivity"
-            android:exported="false" />
+            android:name=".ui.splash.NActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.crop.GalleryActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.crop.CropActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.MainActivity"
-            android:exported="true">
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.diary.DiaryActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.crop.GalleryActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.crop.CropActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustNothing"
+            android:screenOrientation="portrait" />
 
         <service
             android:name=".service.NotificationService"
             android:enabled="true"
             android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-6705616556499368~2470603050" />
+
     </application>
 
 </manifest>

@@ -5,13 +5,10 @@ import android.os.Looper
 import com.teamdev.demngayyeu2020.R
 import com.teamdev.demngayyeu2020.base.BaseFragment
 import com.teamdev.demngayyeu2020.databinding.FragmentDateBinding
-import com.teamdev.demngayyeu2020.databinding.FragmentDiaryBinding
-import com.teamdev.demngayyeu2020.databinding.FragmentMainBinding
-import com.teamdev.demngayyeu2020.databinding.FragmentWaveBinding
 import com.teamdev.demngayyeu2020.dialog.input.InputListener
 import com.teamdev.demngayyeu2020.dialog.menu.letter.LetterListener
 import com.teamdev.demngayyeu2020.ex.*
-import com.teamdev.demngayyeu2020.ui.MainViewModel
+import com.teamdev.demngayyeu2020.ui.main.MainViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 class FragmentDate : BaseFragment<FragmentDateBinding>(), LetterListener, InputListener {

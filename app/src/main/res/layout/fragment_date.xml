@@ -9,7 +9,7 @@
 
         <variable
             name="viewModel"
-            type="com.teamdev.demngayyeu2020.ui.MainViewModel" />
+            type="com.teamdev.demngayyeu2020.ui.main.MainViewModel" />
 
     </data>
 

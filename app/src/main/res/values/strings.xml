@@ -78,4 +78,5 @@
     <string name="txt_feature_warring">Feature will be updated soon</string>
     <string name="txt_shareapp">Share</string>
     <string name="txt_feedback_user">User Feedback</string>
+    <string name="txt_load">Loading...</string>
 </resources>

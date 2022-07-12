@@ -9,7 +9,7 @@ import com.teamdev.demngayyeu2020.dialog.input.InputListener
 import com.teamdev.demngayyeu2020.dialog.menu.wave.MenuWithWaveListener
 import com.teamdev.demngayyeu2020.dialog.wave.SVGListener
 import com.teamdev.demngayyeu2020.ex.*
-import com.teamdev.demngayyeu2020.ui.MainViewModel
+import com.teamdev.demngayyeu2020.ui.main.MainViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 class FragmentWave : BaseFragment<FragmentWaveBinding>(),

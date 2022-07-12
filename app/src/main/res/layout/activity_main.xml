@@ -6,14 +6,15 @@
     <data>
         <variable
             name="viewModel"
-            type="com.teamdev.demngayyeu2020.ui.MainViewModel" />
+            type="com.teamdev.demngayyeu2020.ui.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/csRoot"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.MainActivity">
+        tools:context=".ui.main.MainActivity"
+        android:background="@color/white">
 
         <com.teamdev.demngayyeu2020.views.StatusView
             android:id="@+id/statusView"
@@ -29,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/frameBannerAds"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@drawable/bg_default" />
 
@@ -96,8 +97,22 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:background="@android:color/transparent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/frameBannerAds"
             app:layout_constraintTop_toBottomOf="@+id/rlNavigation" />
+
+        <FrameLayout
+            android:id="@+id/frameBannerAds"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_52sdp"
+            android:layout_marginBottom="@dimen/_1sdp"
+            android:background="@drawable/shape_drawable_ads"
+            android:padding="1.2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </FrameLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

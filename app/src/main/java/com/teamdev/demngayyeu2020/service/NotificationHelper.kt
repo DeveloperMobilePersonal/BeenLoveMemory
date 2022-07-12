@@ -24,6 +24,7 @@ import com.teamdev.demngayyeu2020.ex.Pref
 import com.teamdev.demngayyeu2020.ex.getLoveDay
 import com.teamdev.demngayyeu2020.ex.getStringCompat
 import com.teamdev.demngayyeu2020.ex.loadBitmapCircleCrop
+import com.teamdev.demngayyeu2020.ui.main.MainActivity
 import com.teamdev.demngayyeu2020.ui.splash.NActivity
 import java.io.File
 
@@ -36,7 +37,7 @@ class NotificationHelper(context: Context) : ContextWrapper(context) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel =
                 NotificationChannel("Love", "Love", NotificationManager.IMPORTANCE_LOW).apply {
-                    description =getStringCompat(R.string.app_name)
+                    description = getStringCompat(R.string.app_name)
                     enableLights(false)
                     enableVibration(false)
                     setShowBadge(false)
@@ -49,40 +50,44 @@ class NotificationHelper(context: Context) : ContextWrapper(context) {
     @UiThread
     fun notification(): Notification {
         val notificationLayout = RemoteViews(packageName, R.layout.notification)
-        val notificationIntent = Intent(this, NActivity::class.java)
-        notificationIntent.flags =
-            Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+        /*val notificationIntent = Intent(this, MainActivity::class.java)
+        notificationIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
         val pendingIntent = PendingIntent.getActivity(
             this,
             0,
             notificationIntent,
             PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
-        )
+        )*/
         val builder = NotificationCompat.Builder(applicationContext, "Love")
             .setSmallIcon(R.mipmap.ic_launcher)
-            .setContentIntent(pendingIntent)
             .setAutoCancel(false)
             .setOngoing(true)
             .setCustomContentView(notificationLayout)
         builder.contentView.setTextViewText(R.id.tvLoveSum, getLoveDay(Pref.loveDay))
         if (Pref.sexLocation) {
             //builder.contentView.setTextViewText(R.id.tv_1, Pref.nameMale)
-           // builder.contentView.setTextViewText(R.id.tv_2, Pref.nameFeMale)
+            // builder.contentView.setTextViewText(R.id.tv_2, Pref.nameFeMale)
             if (Pref.faceMale.isNotEmpty()) {
                 val bitmap = loadBitmapCircleCrop(Pref.faceMale, 128)
                 builder.contentView.setImageViewBitmap(R.id.iv1, bitmap)
             } else {
-                builder.contentView.setImageViewResource(R.id.iv1, R.drawable.ic_male_default_notification)
+                builder.contentView.setImageViewResource(
+                    R.id.iv1,
+                    R.drawable.ic_male_default_notification
+                )
             }
             if (Pref.faceFeMale.isNotEmpty()) {
                 val bitmap = loadBitmapCircleCrop(Pref.faceFeMale, 128)
                 builder.contentView.setImageViewBitmap(R.id.iv2, bitmap)
             } else {
-                builder.contentView.setImageViewResource(R.id.iv2, R.drawable.ic_female_default_notification)
+                builder.contentView.setImageViewResource(
+                    R.id.iv2,
+                    R.drawable.ic_female_default_notification
+                )
             }
         } else {
-          //  builder.contentView.setTextViewText(R.id.tv_1, Pref.nameFeMale)
-          //  builder.contentView.setTextViewText(R.id.tv_2, Pref.nameMale)
+            //  builder.contentView.setTextViewText(R.id.tv_1, Pref.nameFeMale)
+            //  builder.contentView.setTextViewText(R.id.tv_2, Pref.nameMale)
             if (Pref.faceMale.isNotEmpty()) {
                 val bitmap = loadBitmapCircleCrop(Pref.faceMale, 128)
                 builder.contentView.setImageViewBitmap(R.id.iv2, bitmap)
