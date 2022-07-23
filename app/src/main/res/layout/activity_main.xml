@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.teamdev.demngayyeu2020.ui.main.MainViewModel" />
@@ -13,92 +14,101 @@
         android:id="@+id/csRoot"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.main.MainActivity"
-        android:background="@color/white">
+        android:background="@color/white"
+        tools:context=".ui.main.MainActivity">
 
-        <com.teamdev.demngayyeu2020.views.StatusView
-            android:id="@+id/statusView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/purple_500"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:visibility="gone" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ivBg"
-            loadImage="@{viewModel.liveBackground}"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toTopOf="@+id/frameBannerAds"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/bg_default" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#4C000000" />
-
-        <View
-            android:visibility="gone"
-            android:id="@+id/view_alpha"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#7F000000" />
-
-        <RelativeLayout
-            android:id="@+id/rlNavigation"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            app:layout_constraintTop_toBottomOf="@+id/statusView">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/ivDiary"
-                android:layout_width="@dimen/_24sdp"
-                android:layout_height="@dimen/_24sdp"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/_12sdp"
-                android:background="?android:selectableItemBackgroundBorderless"
-                android:padding="@dimen/_4sdp"
-                tools:src="@drawable/ic_diary"
-                android:alpha="0.6"/>
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvHome"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_centerInParent="true"
-                android:layout_marginStart="@dimen/_2sdp"
-                android:fontFamily="@font/love_girl"
-                android:gravity="center"
-                android:includeFontPadding="false"
-                android:text="@string/app_name"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_18sdp"
-                android:textStyle="bold" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/ivSetting"
-                android:alpha="0.6"
-                android:layout_width="@dimen/_24sdp"
-                android:layout_height="@dimen/_24sdp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="@dimen/_12sdp"
-                android:background="?android:selectableItemBackgroundBorderless"
-                android:padding="@dimen/_4sdp"
-                tools:src="@drawable/ic_setting" />
-
-        </RelativeLayout>
-
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewPager"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/csContent"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@android:color/transparent"
             app:layout_constraintBottom_toTopOf="@+id/frameBannerAds"
-            app:layout_constraintTop_toBottomOf="@+id/rlNavigation" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.teamdev.demngayyeu2020.views.StatusView
+                android:id="@+id/statusView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/purple_500"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBg"
+                loadImage="@{viewModel.liveBackground}"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/bg_default" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#4C000000" />
+
+            <View
+                android:id="@+id/view_alpha"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#7F000000"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rlNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                app:layout_constraintTop_toBottomOf="@+id/statusView">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivDiary"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:alpha="0.6"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:padding="@dimen/_4sdp"
+                    tools:src="@drawable/ic_diary" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:fontFamily="@font/love_girl"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSetting"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:alpha="0.6"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:padding="@dimen/_4sdp"
+                    tools:src="@drawable/ic_setting" />
+
+            </RelativeLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlNavigation" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <FrameLayout
             android:id="@+id/frameBannerAds"

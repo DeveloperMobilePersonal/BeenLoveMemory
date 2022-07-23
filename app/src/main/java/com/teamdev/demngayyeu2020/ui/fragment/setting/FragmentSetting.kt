@@ -5,6 +5,8 @@ import com.teamdev.demngayyeu2020.base.BaseFragment
 import com.teamdev.demngayyeu2020.databinding.FragmentSettingBinding
 import com.teamdev.demngayyeu2020.ex.*
 import com.teamdev.demngayyeu2020.service.NotificationService
+import com.teamdev.demngayyeu2020.ui.bow.BowActivity
+import com.teamdev.demngayyeu2020.ui.lock.SetUpActivity
 import com.teamdev.demngayyeu2020.ui.main.MainViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
@@ -21,6 +23,13 @@ class FragmentSetting : BaseFragment<FragmentSettingBinding>() {
 
     private val iconNotification: Int
         get() = if (Pref.isNotification) {
+            R.drawable.ic_on_button
+        } else {
+            R.drawable.ic_off_button
+        }
+
+    private val iconLock: Int
+        get() = if (Pref.getString(KEY_LOCK_PASS, "").toString().isNotEmpty()) {
             R.drawable.ic_on_button
         } else {
             R.drawable.ic_off_button
@@ -47,10 +56,16 @@ class FragmentSetting : BaseFragment<FragmentSettingBinding>() {
                 NotificationService.startOrStop(activity)
             }
             viewBinding.llLock.click {
-                showToast(R.string.txt_feature_warring)
+                if (Pref.getString(KEY_LOCK_PASS, "").toString().isNotEmpty()) {
+                    Pref.postString(KEY_LOCK_PASS, "")
+                    viewBinding.ivSwitchLock.setImageResource(iconLock)
+                    showToast(R.string.txt_lock_off)
+                } else {
+                    SetUpActivity.open(activity)
+                }
             }
             viewBinding.llBow.click {
-                showToast(R.string.txt_feature_warring)
+               BowActivity.open(activity)
             }
             viewBinding.llRate.click {
                 activity.rate()
@@ -62,6 +77,13 @@ class FragmentSetting : BaseFragment<FragmentSettingBinding>() {
                 activity.policy()
             }
         }
+    }
+
+    override fun onResume() {
+        runMainActivity {
+            viewBinding.ivSwitchLock.setImageResource(iconLock)
+        }
+        super.onResume()
     }
 
     override fun destroyUI() {

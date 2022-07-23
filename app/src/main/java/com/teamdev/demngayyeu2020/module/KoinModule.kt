@@ -1,5 +1,6 @@
 package com.teamdev.demngayyeu2020.module
 
+import com.teamdev.demngayyeu2020.dialog.capture.DialogCapture
 import com.teamdev.demngayyeu2020.dialog.color.DialogColor
 import com.teamdev.demngayyeu2020.dialog.date.DialogDate
 import com.teamdev.demngayyeu2020.dialog.input.DialogInput
@@ -8,6 +9,8 @@ import com.teamdev.demngayyeu2020.dialog.menu.diary.DialogMenuDiary
 import com.teamdev.demngayyeu2020.dialog.menu.info.DialogMenuInfo
 import com.teamdev.demngayyeu2020.dialog.menu.letter.DialogMenuLetter
 import com.teamdev.demngayyeu2020.dialog.menu.wave.DialogMenuWithWave
+import com.teamdev.demngayyeu2020.dialog.menulock.DialogMenuLock
+import com.teamdev.demngayyeu2020.dialog.rate.DialogRate
 import com.teamdev.demngayyeu2020.dialog.wave.DialogMenuSVG
 import com.teamdev.demngayyeu2020.dialog.wave.adapter.SVGAdapter
 import com.teamdev.demngayyeu2020.permission.PermissionManager
@@ -18,6 +21,8 @@ import com.teamdev.demngayyeu2020.service.NotificationService
 import com.teamdev.demngayyeu2020.ui.main.MainActivity
 import com.teamdev.demngayyeu2020.ui.main.MainViewModel
 import com.teamdev.demngayyeu2020.ui.adapter.ViewPagerAdapter
+import com.teamdev.demngayyeu2020.ui.bow.BowActivity
+import com.teamdev.demngayyeu2020.ui.bow.adapter.BowAdapter
 import com.teamdev.demngayyeu2020.ui.crop.GalleryActivity
 import com.teamdev.demngayyeu2020.ui.crop.adapter.GalleryAdapter
 import com.teamdev.demngayyeu2020.ui.diary.DiaryActivity
@@ -27,6 +32,7 @@ import com.teamdev.demngayyeu2020.ui.fragment.main.FragmentMain
 import com.teamdev.demngayyeu2020.ui.fragment.main.fragment.FragmentDate
 import com.teamdev.demngayyeu2020.ui.fragment.main.fragment.FragmentWave
 import com.teamdev.demngayyeu2020.ui.fragment.setting.FragmentSetting
+import com.teamdev.demngayyeu2020.ui.lock.SetUpActivity
 import org.koin.androidx.fragment.dsl.fragment
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -59,6 +65,8 @@ val activityModule = module {
         factory { DialogMenuSVG(get(), get()) }
         factory { DialogMenuLetter(get()) }
         factory { DialogMenuDiary(get()) }
+        factory { DialogCapture(get()) }
+        factory { DialogRate(get()) }
     }
     scope<GalleryActivity> {
         factory { GalleryAdapter(get()) }
@@ -67,6 +75,12 @@ val activityModule = module {
     }
     scope<DiaryActivity> {
         factory { DialogDate(get()) }
+    }
+    scope<SetUpActivity> {
+        factory { DialogMenuLock(get(), get()) }
+    }
+    scope<BowActivity> {
+        factory { BowAdapter(get()) }
     }
 }
 

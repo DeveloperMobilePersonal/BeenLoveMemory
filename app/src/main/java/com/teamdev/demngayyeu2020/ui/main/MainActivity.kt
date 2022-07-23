@@ -1,13 +1,16 @@
 package com.teamdev.demngayyeu2020.ui.main
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.util.DisplayMetrics
 import android.view.View
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.view.drawToBitmap
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
@@ -16,6 +19,7 @@ import com.teamdev.demngayyeu2020.R
 import com.teamdev.demngayyeu2020.app.ContextApplication
 import com.teamdev.demngayyeu2020.base.BaseActivity
 import com.teamdev.demngayyeu2020.databinding.ActivityMainBinding
+import com.teamdev.demngayyeu2020.dialog.capture.DialogCapture
 import com.teamdev.demngayyeu2020.dialog.color.DialogColor
 import com.teamdev.demngayyeu2020.dialog.date.DialogDate
 import com.teamdev.demngayyeu2020.dialog.input.DialogInput
@@ -24,6 +28,7 @@ import com.teamdev.demngayyeu2020.dialog.menu.diary.DialogMenuDiary
 import com.teamdev.demngayyeu2020.dialog.menu.info.DialogMenuInfo
 import com.teamdev.demngayyeu2020.dialog.menu.letter.DialogMenuLetter
 import com.teamdev.demngayyeu2020.dialog.menu.wave.DialogMenuWithWave
+import com.teamdev.demngayyeu2020.dialog.rate.DialogRate
 import com.teamdev.demngayyeu2020.dialog.wave.DialogMenuSVG
 import com.teamdev.demngayyeu2020.ex.*
 import com.teamdev.demngayyeu2020.room.RoomManager
@@ -38,6 +43,9 @@ import com.teamdev.demngayyeu2020.ui.fragment.main.fragment.FragmentWave
 import com.teamdev.demngayyeu2020.ui.fragment.setting.FragmentSetting
 import com.teamdev.demngayyeu2020.unit.scrMainBanner
 import com.teamdev.demngayyeu2020.viewanimator.ViewAnimator
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
@@ -45,6 +53,16 @@ import kotlin.math.abs
 import kotlin.math.max
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
+
+    companion object {
+        fun open(context: Context) {
+            val intent = Intent(context, MainActivity::class.java)
+            context.startActivity(intent)
+            if (context is Activity) {
+                context.finish()
+            }
+        }
+    }
 
     private val takePhotoForResult =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
@@ -95,6 +113,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     val dialogMenuLetter: DialogMenuLetter by inject()
     val diaryAdapter by inject<DiaryAdapter>()
     val diaryMenuDiary by inject<DialogMenuDiary>()
+    private val dialogCapture by inject<DialogCapture>()
+    private val dialogRate by inject<DialogRate>()
     private val fragmentWave: FragmentWave by inject()
     private val fragmentDate: FragmentDate by inject()
     private val fragmentMain: FragmentMain by inject()
@@ -195,6 +215,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         viewBinding.viewPager.currentItem = 0
     }
 
+    override fun onBackPressed() {
+        if (dialogRate.isShowing) {
+            super.onBackPressed()
+        } else {
+            dialogRate.showUI()
+        }
+    }
+
     override fun destroyUI() {
         takePhotoForResult.unregister()
     }
@@ -218,6 +246,19 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         }
         val adRequest = AdRequest.Builder().build()
         adView.loadAd(adRequest)
+    }
+
+    fun captureScreen() {
+        lifecycleScope.launch(Dispatchers.Main) {
+            kotlin.runCatching {
+                val drawToBitmap = viewBinding.csContent.drawToBitmap()
+                saveBitmap(drawToBitmap) { path ->
+                    if (isActive() && path.isNotEmpty()) {
+                        dialogCapture.showUI(path)
+                    }
+                }
+            }
+        }
     }
 
     private val adSize: AdSize

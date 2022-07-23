@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <androidx.cardview.widget.CardView
+            app:cardBackgroundColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            app:cardCornerRadius="@dimen/_12sdp"
+            app:cardUseCompatPadding="true">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_12sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/pinkEC2994"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_rate"
+                    android:textSize="@dimen/_18sdp"
+                    android:includeFontPadding="false"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_gravity="center_horizontal"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="@dimen/_55sdp"
+                    android:layout_height="@dimen/_55sdp"
+                    app:srcCompat="@drawable/ic_heart_4"
+                    app:tint="@color/pinkEC2994"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:fontFamily="@font/rubik_regular"
+                    android:includeFontPadding="false"
+                    android:gravity="center"
+                    android:textColor="@color/pinkEC2994"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_content_rate"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:includeFontPadding="false"
+                    android:id="@+id/bt_rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@drawable/shape_rate"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="@string/txt_rate_now"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+</layout>

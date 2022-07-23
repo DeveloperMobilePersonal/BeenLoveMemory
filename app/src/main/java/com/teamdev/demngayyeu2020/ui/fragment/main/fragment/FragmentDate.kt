@@ -84,6 +84,12 @@ class FragmentDate : BaseFragment<FragmentDateBinding>(), LetterListener, InputL
         mainViewModel.liveLetterNameLocation.value = Pref.letterNameLocation
     }
 
+    override fun menuCapture() {
+        runMainActivity {
+            it.captureScreen()
+        }
+    }
+
     override fun onInputAllow(key: String, txt: String) {
         if (!isActive()) return
         if (key == KEY_LETTER) {

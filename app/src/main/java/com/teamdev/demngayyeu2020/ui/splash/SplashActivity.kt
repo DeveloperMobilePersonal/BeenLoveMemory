@@ -14,8 +14,11 @@ import com.google.android.gms.ads.appopen.AppOpenAd
 import com.teamdev.demngayyeu2020.R
 import com.teamdev.demngayyeu2020.base.BaseActivity
 import com.teamdev.demngayyeu2020.databinding.ActivitySplashBinding
+import com.teamdev.demngayyeu2020.ex.KEY_LOCK_PASS
+import com.teamdev.demngayyeu2020.ex.Pref
 import com.teamdev.demngayyeu2020.ex.hide
 import com.teamdev.demngayyeu2020.ex.show
+import com.teamdev.demngayyeu2020.ui.lock.SetUpActivity
 import com.teamdev.demngayyeu2020.ui.main.MainActivity
 import com.teamdev.demngayyeu2020.unit.scrSplashOpenApp
 import com.teamdev.demngayyeu2020.viewanimator.ViewAnimator
@@ -43,6 +46,10 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>(), JobSplash.JobProgr
     override fun onPause() {
         jobSplash.stopJob()
         super.onPause()
+    }
+
+    override fun onBackPressed() {
+
     }
 
     override fun destroyUI() {
@@ -82,7 +89,11 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>(), JobSplash.JobProgr
             return
         }
         jobSplash.stopJob()
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = if (Pref.getString(KEY_LOCK_PASS, "").toString().isNotEmpty()) {
+            Intent(this, SetUpActivity::class.java)
+        } else {
+            Intent(this, MainActivity::class.java)
+        }
         startActivity(intent)
         finish()
     }

@@ -65,8 +65,8 @@ class NotificationHelper(context: Context) : ContextWrapper(context) {
             .setCustomContentView(notificationLayout)
         builder.contentView.setTextViewText(R.id.tvLoveSum, getLoveDay(Pref.loveDay))
         if (Pref.sexLocation) {
-            //builder.contentView.setTextViewText(R.id.tv_1, Pref.nameMale)
-            // builder.contentView.setTextViewText(R.id.tv_2, Pref.nameFeMale)
+            //builder.contentView.setTextViewText(R.id.txt_1, Pref.nameMale)
+            // builder.contentView.setTextViewText(R.id.txt_2, Pref.nameFeMale)
             if (Pref.faceMale.isNotEmpty()) {
                 val bitmap = loadBitmapCircleCrop(Pref.faceMale, 128)
                 builder.contentView.setImageViewBitmap(R.id.iv1, bitmap)
@@ -86,8 +86,8 @@ class NotificationHelper(context: Context) : ContextWrapper(context) {
                 )
             }
         } else {
-            //  builder.contentView.setTextViewText(R.id.tv_1, Pref.nameFeMale)
-            //  builder.contentView.setTextViewText(R.id.tv_2, Pref.nameMale)
+            //  builder.contentView.setTextViewText(R.id.txt_1, Pref.nameFeMale)
+            //  builder.contentView.setTextViewText(R.id.txt_2, Pref.nameMale)
             if (Pref.faceMale.isNotEmpty()) {
                 val bitmap = loadBitmapCircleCrop(Pref.faceMale, 128)
                 builder.contentView.setImageViewBitmap(R.id.iv2, bitmap)

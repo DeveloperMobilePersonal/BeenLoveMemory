@@ -2,6 +2,7 @@ package com.teamdev.demngayyeu2020.ex
 
 import com.teamdev.demngayyeu2020.R
 import com.teamdev.demngayyeu2020.dialog.wave.SVGModel
+import com.teamdev.demngayyeu2020.ui.bow.adapter.BowModel
 
 val waveSVGList = getListWaveSvg()
 val frameSVGList = getListFrame()
@@ -70,5 +71,22 @@ fun getListWaveSvg(): MutableList<SVGModel> {
         SVGModel(23, R.drawable.wave_27, R.raw.wave_27),
         SVGModel(24, R.drawable.wave_24, R.raw.wave_24),
         SVGModel(25, R.drawable.wave_25, R.raw.wave_25),
+    )
+}
+
+fun getBowList(): MutableList<BowModel> {
+    return mutableListOf(
+        BowModel("${getStringCompat(R.string.bachduong)}\n(21/3-20/4)", R.drawable.ic_aries, "https://lichngaytot.com/cung-hoang-dao/bach-duong-1.html"),
+        BowModel("${getStringCompat(R.string.kimnguu)}\n(21/4-20/5)", R.drawable.ic_taurus, "https://lichngaytot.com/cung-hoang-dao/kim-nguu-2.html"),
+        BowModel("${getStringCompat(R.string.songtu)}\n(21/5-21/6)", R.drawable.ic_gemini, "https://lichngaytot.com/cung-hoang-dao/song-tu-3.html"),
+        BowModel("${getStringCompat(R.string.cugiai)}\n(22/6-22/7)", R.drawable.ic_cancer, "https://lichngaytot.com/cung-hoang-dao/cu-giai-4.html"),
+        BowModel("${getStringCompat(R.string.sutu)}\n(23/7-22/8)", R.drawable.ic_leo, "https://lichngaytot.com/cung-hoang-dao/su-tu-5.html"),
+        BowModel("${getStringCompat(R.string.xunu)}\n(23/8-22/9)", R.drawable.ic_virgo, "https://lichngaytot.com/cung-hoang-dao/xu-nu-6.html"),
+        BowModel("${getStringCompat(R.string.thienbinh)}\n(23/9-23/10)", R.drawable.ic_libra, "https://lichngaytot.com/cung-hoang-dao/thien-binh-7.html"),
+        BowModel("${getStringCompat(R.string.bocap)}\n(24/10-22/11)", R.drawable.ic_scorpio, "https://lichngaytot.com/cung-hoang-dao/ho-cap-8.html"),
+        BowModel("${getStringCompat(R.string.nhanma)}\n(23/11-21/12)", R.drawable.ic_sagittarius, "https://lichngaytot.com/cung-hoang-dao/nhan-ma-9.html"),
+        BowModel("${getStringCompat(R.string.maket)}\n(22/12-19/1)", R.drawable.ic_capricornus, "https://lichngaytot.com/cung-hoang-dao/ma-ket-10.html"),
+        BowModel("${getStringCompat(R.string.baobinh)}\n(20/1-18/2)", R.drawable.ic_aquarius, "https://lichngaytot.com/cung-hoang-dao/bao-binh-11.html"),
+        BowModel("${getStringCompat(R.string.songngu)}\n(19/2-20/3)", R.drawable.ic_pisces, "https://lichngaytot.com/cung-hoang-dao/song-ngu-12.html"),
     )
 }

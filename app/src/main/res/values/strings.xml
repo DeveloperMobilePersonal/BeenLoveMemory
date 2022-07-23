@@ -34,6 +34,7 @@
     <string name="maket">Capricorn</string>
     <string name="baobinh">Aquarius</string>
     <string name="songngu">Pisces</string>
+
     <string name="txt_calendar">Calendar</string>
     <string name="txt_year">Year</string>
     <string name="txt_month">Month</string>
@@ -78,5 +79,28 @@
     <string name="txt_feature_warring">Feature will be updated soon</string>
     <string name="txt_shareapp">Share</string>
     <string name="txt_feedback_user">User Feedback</string>
-    <string name="txt_load">Loading...</string>
+
+    <string name="txt_load">Loading…</string>
+    <string name="txt_set_up_lock">Set up lock</string>
+    <string name="txt_pass_set_again">Reset Password</string>
+    <string name="txt_pass_draw">Pattern lock</string>
+    <string name="txt_pass_pin">Pin lock</string>
+    <string name="txt_message_draw">Draw pattern to unlock</string>
+    <string name="txt_message_pin">Import PIN to unlock</string>
+    <string name="txt_pass_illegal">Connect at least 4 point</string>
+    <string name="txt_select_lock_type">Select lock type</string>
+    <string name="txt_message_lock">Privacy protected</string>
+    <string name="txt_drop_arm">Relax your hands when you are done drawing</string>
+    <string name="txt_message_pin_incorrect">PIN code is incorrect</string>
+    <string name="txt_message_pin_confirm">Re-import PIN to confirm</string>
+    <string name="txt_message_pin_does_not_match">PIN code does not match</string>
+    <string name="txt_message_draw_incorrect">The drawing is not correct</string>
+    <string name="txt_message_draw_confirm">Redraw the pattern to confirm</string>
+    <string name="txt_message_draw_does_not_match">The drawing is not match</string>
+    <string name="txt_successful_lock_installation">Successful lock installation</string>
+    <string name="txt_lock_off">Lock turn off</string>
+    <string name="txt_watch_now">Watch now</string>
+    <string name="txt_share">Share now</string>
+    <string name="txt_content_rate">Do you love the app?</string>
+    <string name="txt_rate_now">Rate now</string>
 </resources>

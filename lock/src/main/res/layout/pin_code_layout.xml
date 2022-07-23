@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/_34sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:gravity="center"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_12sdp"
+            android:paddingTop="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_6sdp"
+            android:includeFontPadding="false"
+            android:textColor="#FFFFFF"
+            android:id="@+id/txtMessage"
+            tools:text="Vẽ hình để mở khóa"
+            android:fontFamily="@font/ios"
+            android:textSize="@dimen/_14ssp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:gravity="center"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_12sdp"
+            android:paddingTop="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_6sdp"
+            android:includeFontPadding="false"
+            android:textColor="#a2ffffff"
+            android:id="@+id/txtMessage1"
+            tools:text="Vẽ hình để mở khóa"
+            android:fontFamily="@font/ios"
+            android:textSize="@dimen/_9ssp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutPinCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                tools:background="#A2A2A2">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llDot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="@+id/layout2"
+                    app:layout_constraintStart_toStartOf="@+id/layout2"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivDot1"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:layout_width="@dimen/_13sdp"
+                        android:layout_height="@dimen/_13sdp"
+                        android:background="@drawable/shape_circle_strocke"
+                        android:padding="@dimen/_2sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivDot2"
+                        android:layout_width="@dimen/_13sdp"
+                        android:layout_height="@dimen/_13sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:background="@drawable/shape_circle_strocke"
+                        android:padding="@dimen/_2sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivDot3"
+                        android:layout_width="@dimen/_13sdp"
+                        android:layout_height="@dimen/_13sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:background="@drawable/shape_circle_strocke"
+                        android:padding="@dimen/_2sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivDot4"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:layout_width="@dimen/_13sdp"
+                        android:layout_height="@dimen/_13sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:background="@drawable/shape_circle_strocke"
+                        android:padding="@dimen/_2sdp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.lock.viewanimator.LayoutAnimator
+                    android:id="@+id/layout1"
+                    android:layout_width="@dimen/_46sdp"
+                    android:layout_height="@dimen/_46sdp"
+                    android:layout_marginTop="@dimen/_42sdp"
+                    android:background="@drawable/ripper_cta"
+                    android:tag="1"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@+id/layout2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llDot">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/ios"
+                        android:includeFontPadding="false"
+                        android:text="1"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_20sdp" />
+
+                </com.lock.viewanimator.LayoutAnimator>
+
+                <com.lock.viewanimator.LayoutAnimator
+                    android:id="@+id/layout2"
+                    android:layout_width="@dimen/_46sdp"
+                    android:layout_height="@dimen/_46sdp"
+                    android:layout_marginStart="@dimen/_24sdp"
+                    android:layout_marginEnd="@dimen/_24sdp"
+                    android:background="@drawable/ripper_cta"
+                    android:tag="2"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@+id/layout3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/layout1"
+                    app:layout_constraintTop_toTopOf="@+id/layout1">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/ios"
+                        android:includeFontPadding="false"
+                        android:text="2"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_20sdp" />
+
+                </com.lock.viewanimator.LayoutAnimator>
+
+                <com.lock.viewanimator.LayoutAnimator
+                    android:id="@+id/layout3"
+                    android:layout_width="@dimen/_46sdp"
+                    android:layout_height="@dimen/_46sdp"
+                    android:background="@drawable/ripper_cta"
+                    android:tag="3"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/layout2"
+                    app:layout_constraintTop_toTopOf="@+id/layout1">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/ios"
+                        android:includeFontPadding="false"
+                        android:text="3"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_20sdp" />
+
+                </com.lock.viewanimator.LayoutAnimator>
+
+                <com.lock.viewanimator.LayoutAnimator
+                    android:id="@+id/layout4"
+                    android:layout_width="@dimen/_46sdp"
+                    android:layout_height="@dimen/_46sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:background="@drawable/ripper_cta"
+                    android:tag="4"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@+id/layout1"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/layout1"
+                    app:layout_constraintTop_toBottomOf="@+id/layout1">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/ios"
+                        android:includeFontPadding="false"
+                        android:text="4"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_20sdp" />
+
+                </com.lock.viewanimator.LayoutAnimator>
+
+                <com.lock.viewanimator.LayoutAnimator
+                    android:id="@+id/layout5"
+                    android:layout_width="@dimen/_46sdp"
+                    android:layout_height="@dimen/_46sdp"
+                    android:background="@drawable/ripper_cta"
+                    android:tag="5"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@+id/layout2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/layout2"
+                    app:layout_constraintTop_toTopOf="@+id/layout4">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/ios"
+                        android:includeFontPadding="false"
+                        android:text="5"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_20sdp" />
+
+                </com.lock.viewanimator.LayoutAnimator>
+
+                <com.lock.viewanimator.LayoutAnimator
+                    android:id="@+id/layout6"
+                    android:layout_width="@dimen/_46sdp"
+                    android:layout_height="@dimen/_46sdp"
+                    android:background="@drawable/ripper_cta"
+                    android:tag="6"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@+id/layout3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/layout3"
+                    app:layout_constraintTop_toTopOf="@+id/layout4">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/ios"
+                        android:includeFontPadding="false"
+                        android:text="6"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_20sdp" />
+
+                </com.lock.viewanimator.LayoutAnimator>
+
+                <com.lock.viewanimator.LayoutAnimator
+                    android:id="@+id/layout7"
+                    android:layout_width="@dimen/_46sdp"
+                    android:layout_height="@dimen/_46sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:background="@drawable/ripper_cta"
+                    android:tag="7"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@+id/layout1"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/layout1"
+                    app:layout_constraintTop_toBottomOf="@+id/layout4">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/ios"
+                        android:includeFontPadding="false"
+                        android:text="7"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_20sdp" />
+
+                </com.lock.viewanimator.LayoutAnimator>
+
+                <com.lock.viewanimator.LayoutAnimator
+                    android:id="@+id/layout8"
+                    android:layout_width="@dimen/_46sdp"
+                    android:layout_height="@dimen/_46sdp"
+                    android:background="@drawable/ripper_cta"
+                    android:tag="8"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@+id/layout2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/layout2"
+                    app:layout_constraintTop_toTopOf="@+id/layout7">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/ios"
+                        android:includeFontPadding="false"
+                        android:text="8"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_20sdp" />
+
+                </com.lock.viewanimator.LayoutAnimator>
+
+                <com.lock.viewanimator.LayoutAnimator
+                    android:id="@+id/layout9"
+                    android:layout_width="@dimen/_46sdp"
+                    android:layout_height="@dimen/_46sdp"
+                    android:background="@drawable/ripper_cta"
+                    android:tag="9"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@+id/layout3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/layout3"
+                    app:layout_constraintTop_toTopOf="@+id/layout7">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/ios"
+                        android:includeFontPadding="false"
+                        android:text="9"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_20sdp" />
+
+                </com.lock.viewanimator.LayoutAnimator>
+
+                <com.lock.viewanimator.LayoutAnimator
+                    android:id="@+id/layout0"
+                    android:layout_width="@dimen/_46sdp"
+                    android:layout_height="@dimen/_46sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:background="@drawable/ripper_cta"
+                    android:tag="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/layout8"
+                    app:layout_constraintStart_toStartOf="@+id/layout8"
+                    app:layout_constraintTop_toBottomOf="@+id/layout8">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/ios"
+                        android:includeFontPadding="false"
+                        android:text="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_20sdp" />
+
+                </com.lock.viewanimator.LayoutAnimator>
+
+                <com.lock.viewanimator.LayoutAnimator
+                    android:id="@+id/layoutX"
+                    android:layout_width="@dimen/_46sdp"
+                    android:layout_height="@dimen/_46sdp"
+                    android:background="@drawable/ripper_cta"
+                    android:tag="x"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/layout0"
+                    app:layout_constraintEnd_toEndOf="@+id/layout9"
+                    app:layout_constraintStart_toStartOf="@+id/layout9"
+                    app:layout_constraintTop_toTopOf="@+id/layout0">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_24ssp"
+                        android:layout_height="@dimen/_24ssp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/ios"
+                        android:includeFontPadding="false"
+                        app:srcCompat="@drawable/ic_backspace"
+                        app:tint="#FFFFFF" />
+
+                </com.lock.viewanimator.LayoutAnimator>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.lock.PatternLockView
+                android:id="@+id/pattern"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:visibility="invisible"
+                app:lock_autoLink="true"
+                app:lock_enableVibrate="false"
+                app:lock_lineColor="#b2ffffff"
+                app:lock_lineWidth="5dp"
+                app:lock_nodeHighlightSrc="@drawable/pattern_lock_dot_node_highlighted"
+                app:lock_nodeOnAnim="@anim/pattern_lock_node_anim_larger"
+                app:lock_nodeSize="@dimen/_15sdp"
+                app:lock_nodeSrc="@drawable/pattern_lock_dot_node_normal"
+                app:lock_nodeTouchExpand="@dimen/_10sdp"
+                app:lock_padding="@dimen/_20sdp"
+                app:lock_size="3"
+                app:lock_spacing="@dimen/_70sdp"
+                app:lock_vibrateTime="50" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

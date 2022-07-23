@@ -165,3 +165,4 @@ private fun getBow(day: Int, month: Int): Pair<String, Int> {
         Pair("0", -1)
     }
 }
+

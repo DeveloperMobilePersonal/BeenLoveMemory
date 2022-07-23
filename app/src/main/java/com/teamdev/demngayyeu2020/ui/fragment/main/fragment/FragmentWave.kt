@@ -1,5 +1,7 @@
 package com.teamdev.demngayyeu2020.ui.fragment.main.fragment
 
+import androidx.core.view.drawToBitmap
+import androidx.lifecycle.lifecycleScope
 import com.teamdev.demngayyeu2020.R
 import com.teamdev.demngayyeu2020.base.BaseFragment
 import com.teamdev.demngayyeu2020.databinding.FragmentWaveBinding
@@ -10,6 +12,9 @@ import com.teamdev.demngayyeu2020.dialog.menu.wave.MenuWithWaveListener
 import com.teamdev.demngayyeu2020.dialog.wave.SVGListener
 import com.teamdev.demngayyeu2020.ex.*
 import com.teamdev.demngayyeu2020.ui.main.MainViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 class FragmentWave : BaseFragment<FragmentWaveBinding>(),
@@ -87,7 +92,9 @@ class FragmentWave : BaseFragment<FragmentWaveBinding>(),
     }
 
     override fun menuWithWaveCapture() {
-
+        runMainActivity {activity ->
+            activity.captureScreen()
+        }
     }
 
     override fun onInputAllow(key: String, txt: String) {

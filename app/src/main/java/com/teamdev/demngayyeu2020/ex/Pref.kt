@@ -46,6 +46,10 @@ const val KEY_LETTER_NAME_LOCATION = "letter_name_location"
 const val KEY_LETTER_MESSAGE_CUSTOM = "letter_message_custom"
 const val KEY_NOTIFICATION = "notification"
 
+const val KEY_LOCK_PASS = "lock_pass"
+const val KEY_PASS_TYPE = "key_pass_type"
+const val KEY_PASS_PIN = "key_pass_pin"
+const val KEY_PASS_DRAW = "key_pass_draw"
 
 object Pref {
 

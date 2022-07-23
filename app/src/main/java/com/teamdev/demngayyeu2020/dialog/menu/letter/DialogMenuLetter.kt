@@ -29,6 +29,10 @@ class DialogMenuLetter(activityCompat: BaseActivity<*>) :
             listener?.menuLetterRotate(key)
             hideUI()
         }
+        viewBinding.llCapture.click {
+            listener?.menuCapture()
+            hideUI()
+        }
     }
 
     override fun gravity(): Int {
