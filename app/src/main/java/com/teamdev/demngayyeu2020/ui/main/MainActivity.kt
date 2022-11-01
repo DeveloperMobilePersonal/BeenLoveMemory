@@ -36,7 +36,7 @@ import com.teamdev.demngayyeu2020.ui.fragment.main.FragmentMain
 import com.teamdev.demngayyeu2020.ui.fragment.main.fragment.FragmentDate
 import com.teamdev.demngayyeu2020.ui.fragment.main.fragment.FragmentWave
 import com.teamdev.demngayyeu2020.ui.fragment.setting.FragmentSetting
-import com.teamdev.demngayyeu2020.unit.scrMainBanner
+import com.teamdev.demngayyeu2020.unit.ID_SCREEN_MAIN_BANNER
 import com.teamdev.demngayyeu2020.viewanimator.ViewAnimator
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -209,7 +209,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         val adView = AdView(this)
         viewBinding.frameBannerAds.removeAllViews()
         viewBinding.frameBannerAds.addView(adView)
-        adView.adUnitId = scrMainBanner()
+        adView.adUnitId = ID_SCREEN_MAIN_BANNER
         adView.adSize = adSize
         adView.loadObserver {
             if (isActive() && it.not()) {

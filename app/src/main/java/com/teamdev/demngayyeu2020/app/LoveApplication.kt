@@ -28,7 +28,7 @@ class LoveApplication : Application() {
             modules(listModule)
         }
         val builder = RequestConfiguration.Builder()
-        builder.setTestDeviceIds(listOf("187CBF63AF8AA99009F2D9E97CB01317"))
+        builder.setTestDeviceIds(listOf("6F7ADC4FD592DEA0C235BC3A2CCEC2EC"))
         MobileAds.setRequestConfiguration(builder.build())
     }
 

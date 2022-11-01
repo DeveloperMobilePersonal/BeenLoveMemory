@@ -2,10 +2,6 @@ package com.teamdev.demngayyeu2020.ui.splash
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import androidx.lifecycle.lifecycleScope
-import androidx.transition.TransitionManager
 import com.google.android.gms.ads.AdError
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.FullScreenContentCallback
@@ -15,10 +11,8 @@ import com.teamdev.demngayyeu2020.R
 import com.teamdev.demngayyeu2020.base.BaseActivity
 import com.teamdev.demngayyeu2020.databinding.ActivitySplashBinding
 import com.teamdev.demngayyeu2020.ex.hide
-import com.teamdev.demngayyeu2020.ex.show
 import com.teamdev.demngayyeu2020.ui.main.MainActivity
-import com.teamdev.demngayyeu2020.unit.scrSplashOpenApp
-import com.teamdev.demngayyeu2020.viewanimator.ViewAnimator
+import com.teamdev.demngayyeu2020.unit.ID_SCREEN_SPLASH_APP_OPEN
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : BaseActivity<ActivitySplashBinding>(), JobSplash.JobProgress {
@@ -91,7 +85,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>(), JobSplash.JobProgr
         val request = getAdRequest()
         AppOpenAd.load(
             this,
-            scrSplashOpenApp(),
+            ID_SCREEN_SPLASH_APP_OPEN,
             request,
             AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT,
             loadCallback

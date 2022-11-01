@@ -13,7 +13,7 @@ class ScanPhoto(private val context: Context) {
 
     @SuppressLint("Recycle", "Range")
     fun startScan(): MutableList<PhotoModel> {
-        val uri: Uri = MediaStore.Files.getContentUri("external")
+        val uri: Uri = MediaStore.Images.Media.getContentUri("external")
         val cr: ContentResolver = context.contentResolver
         val arrayOf = arrayOf(MediaStore.Images.Media._ID, MediaStore.Images.Media.DATA)
         val cursor: Cursor? = cr.query(
